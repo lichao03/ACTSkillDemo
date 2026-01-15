@@ -18,7 +18,7 @@ namespace ACTSkillDemo
         {
             MachineController controller = (MachineController) actionNode.Owner.Owner.Controller;
             VelocityAction config = (VelocityAction) actionNode.Config;
-            controller.Rigidbody.velocity = controller.LocalToWorld.MultiplyVector(config.Velocity);
+            controller.Rigidbody.linearVelocity = controller.LocalToWorld.MultiplyVector(config.Velocity);
         }
 
         public void OnExit(ActionNode actionNode)

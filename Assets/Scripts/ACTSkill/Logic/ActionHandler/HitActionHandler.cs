@@ -17,11 +17,11 @@ namespace ACTSkillDemo
             controller.SetPauseFrameCount(injuredInfo.Config.PauseFrameCount, true);
             if (injuredInfo.Config.ExtraData is AttackHitConfig hitConfig)
             {
-                controller.Rigidbody.velocity = injuredInfo.Attacker.LocalToWorld.MultiplyVector(injuredInfo.Config.AttackDirection * hitConfig.HitForce);
+                controller.Rigidbody.linearVelocity = injuredInfo.Attacker.LocalToWorld.MultiplyVector(injuredInfo.Config.AttackDirection * hitConfig.HitForce);
             }
             else
             {
-                controller.Rigidbody.velocity = Vector3.zero;
+                controller.Rigidbody.linearVelocity = Vector3.zero;
             }
         }
 

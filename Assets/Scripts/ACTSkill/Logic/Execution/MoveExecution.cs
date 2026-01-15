@@ -31,7 +31,7 @@ namespace ACTSkillDemo
             direction.y = 0;
             direction.Normalize();
             controller.transform.forward = direction;
-            controller.Rigidbody.velocity = direction * Speed;
+            controller.Rigidbody.linearVelocity = direction * Speed;
         }
 
         public MoveExecution Clone()

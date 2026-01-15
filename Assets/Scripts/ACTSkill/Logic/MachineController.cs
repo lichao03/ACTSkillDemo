@@ -124,14 +124,14 @@ namespace ACTSkillDemo
                 if (isPauseFrame)
                 {
                     oriIsKenematic = Rigidbody.isKinematic;
-                    oriVelocity = Rigidbody.velocity;
+                    oriVelocity = Rigidbody.linearVelocity;
                     Rigidbody.isKinematic = true;
-                    Rigidbody.velocity = Vector3.zero;
+                    Rigidbody.linearVelocity = Vector3.zero;
                 }
                 else
                 {
                     Rigidbody.isKinematic = oriIsKenematic;
-                    Rigidbody.velocity = oriVelocity;
+                    Rigidbody.linearVelocity = oriVelocity;
                 }
             }
             return !isPause;
